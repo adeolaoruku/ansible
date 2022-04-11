@@ -1,0 +1,8 @@
+- name: myplaybook1
+  hosts: webservers
+  become: true
+  tasks:
+    - name: server patching
+      yum:
+        name: '*'
+        state: latest
